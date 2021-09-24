@@ -1,0 +1,28 @@
+site_name: VS1 Labor
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: assets/hka.png
+  features:
+    - navigation.instant
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.keys
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
