@@ -212,7 +212,7 @@ git checkout master
 git merge <alice's-branch-name>
 ```
 
-Änderungen des Original-Repositories nachladen
+### Änderungen des Original-Repositories nachladen
 
 Im Laufe der Vorlesung wird das Original-Repository erweitert. In diesem
 Fall müssen die Änderungen des originalen Repositories in den Fork
@@ -257,7 +257,7 @@ Hier ein Beispielablauf:
 ![Text Description automatically
 generated](img/git/image5.png)
 
-Ein Wort zum Tooling
+### Ein Wort zum Git Tooling
 
 Neben der Kommandozeile, die wir hier kennengelernt haben, gibt es auch
 viele grafische Benutzeroberflächen, mit denen dieselben Abläufe
@@ -266,18 +266,140 @@ eine Git-Integration ein. Auch GitHub selbst bietet eine grafische
 Benutzeroberfläche für das Verwalten von Git-Repositories an. Die Wahl
 des Werkzeuges bleibt letztendlich Ihnen überlassen.
 
-Hilfreiche Links
+!!! tip "Hilfreiche Links"
+    Der einfache Einstieg in Git:
+    <https://rogerdudler.github.io/git-guide/index.de.html>  
+    Kostenfreier Kurs:
+    <https://www.udacity.com/course/version-control-with-git--ud123>  
+    Git Dokumentation: <https://git-scm.com/doc>  
+    Fork synchronisieren im Detail:
+    <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork>  
 
-Der einfache Einstieg in Git:
-<https://rogerdudler.github.io/git-guide/index.de.html>
 
-Kostenfreier Kurs:
-<https://www.udacity.com/course/version-control-with-git--ud123>
+## VS code
 
-Git Dokumentation: <https://git-scm.com/doc>
+### Allgemeines
 
-Fork synchronisieren im Detail:
-<https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork>
+VS-Code oder Visual Studio Code ist eine offene Entwicklungsumgebung von
+Microsoft (nicht zu verwechseln mit Visual Studio). Das Tool ist sehr
+universell ausgelegt und auf keine bestimmte Programmiersprache oder
+Technologie zugeschnitten. Stattdessen kann der Support für Sprachen oder
+Features über Extensions installiert werden. So wird VS code zur IDE für Java,
+C, Web, Rust, Latex etc.
+
+### Installation
+
+### Windows & Mac
+
+Das Setup kann unter der folgenden Adresse heruntergeladen werden:
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+### Linux
+
+Ubuntu
+```sh
+sudo snap install --classic code
+```
+
+Arch
+```sh
+git clone https://aur.archlinux.org/visual-studio-code-bin.git
+cd visual-studio-code-bin
+makepkg -si
+```
+
+???+ tip "VS Code vs Code-OSS"
+    Das Produkt VS Code ist eine modifizierte Version des Open-Source Editors
+    Code-OSS. Bei Code-OSS fehlt das Microsoft-Branding, das Sammeln von
+    Persönlichen Daten und aus [unerklärlichen
+    Gründen](https://pics.me.me/thumb_hmmm-5960402.png) die Adresse des
+    Extension-Marketplace. Diese Kann allerdings [manuell
+    hinzugefügt](https://stackoverflow.com/questions/64463768/cant-find-certain-extensions-in-code-ossopen-source-variant-of-visual-studio-c)
+    werden
+    
+
+
+### Remote container
+
+Die Remote extension erlaubt es, sich mit einem Container zu verbinden und
+diesen als entwicklungsumgebung zu nutzen.  Wenn eine Verbindung zu einem
+Container besteht werden alle Dateien im VS code workspace im container
+gespeichert und alle programme, die VSC startet laufen im Container.
+
+#### Installation
+
+![installation](https://i.imgur.com/hpwiDNL.png)
+
+#### Nutzung
+
+TODO
+
+
+### Installation
+
+## Docker
+
+### Container
+
+Die Nutzererfahrung von Containern lässt sich als "Virtuelle Maschinen aber
+nicht so langsam" beschreiben. Es sind isolierte Umgebungen, die ein eigenes
+Betriebssystem mitsamt den Programmen, die darin laufen enthalten.
+
+Der Große Vorteil an Containern ist, dass sie sich als container images
+beliebig verbreiten lassen. Da ein Container sein eigenes Betriebssystem
+enthält ist garantiert dass er überall genau so funktioniert wie auch auf dem
+eigenen Computer.
+
+Um die gute Performanz zu erreichen verwendet Docker einige Technologien, die
+nur im Linux Kernel vorhanden sind, weshalb Docker für Windows und Mac beide in
+einer virtuellen Maschine laufen müssen. 
+
+### Installation
+
+#### Linux
+
+Arch Linux
+```sh
+sudo pacman -S docker
+```
+
+Ubuntu
+
+```sh
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+#### Windows
+
+Das Setup von Docker für Windows kann unter
+https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe
+heruntergeladen werden. 
+
+Die virtuelle Maschine
+Diese allerdings mithilfe von [WSL2](https://docs.docker.com/desktop/windows/install/#wsl-2-backend) um eini
+
+#### Mac
+
+```sh
+command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew cask install docker
+```
 
 
 ## Debuggen in Google Chrome
@@ -339,7 +461,7 @@ angezeigt.
 Durch das Öffnen einer Datei können Breakpoints gesetzt werden.
 
 Alternativ kann man im Programmcode selbst (also in der IDE oder Editor) den
-Befehlsaufruf \"debugger;\" hinzufügen um einen Breakpoint zu setzen.
+Befehlsaufruf ```"debugger;"``` hinzufügen um einen Breakpoint zu setzen.
 
 Auf der rechten Seite befinden sich die bekannten
 Debugging-Möglichkeiten, wie zum Beispiel das Fortsetzen bis zum
@@ -358,7 +480,7 @@ der ab Preview angezeigt.
 Es werden auch mehrere Filteroptionen angeboten, um einen Überblick
 beim Netzwerkverkehr zu haben.
 
-Wichtig kann auch die Checkbox \"Disable cache\" sein, um mögliche
+Wichtig kann auch die Checkbox ```"Disable cache"``` sein, um mögliche
 Fehler beim Entwickeln durch zu strenges Caching des Browsers zu
 vermeiden.
 
