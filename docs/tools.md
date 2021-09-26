@@ -387,14 +387,17 @@ gespeichert und alle Programme, die VSC startet laufen im Container.
 
 ![installation](https://i.imgur.com/hpwiDNL.png)
 
-
-
 #### Nutzung
 
-TODO
+![image](https://i.imgur.com/Dms9eUh.png)
+![image2](https://i.imgur.com/AXcQuQ2.png)
 
-
-### Installation
+Die obigen Schritte laden automatisch das Passende Container-Image herunter,
+erstellen und starten einen Container, kopieren alle Dateien in den Container
+und Verbinden VS Code mit dem Container. VS code merkt sich das projekt und
+wird es auch nach einem neustart wieder im container öffnen. Sollte das nicht
+der Fall sein können Sie einfach die obigen schritte wiederholen. Die
+statuszeile zeigt, ob eine Verbindung zu einem Container besteht
 
 ## Docker
 
