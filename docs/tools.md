@@ -2,12 +2,7 @@
 
 ## Git
 
-Git ist ein Versionierungssystem für Dateien und Ordner in einem Projekt. Die
-Gesamtheit des versionierten Projektes wird als Repository bezeichnet. Über
-Webseiten wie GitHub (<https://github.com>) oder GitLab (<https://gitlab.com>)
-ist es möglich, Repositories gemeinsam und gleichzeitig mit anderen Personen zu
-bearbeiten.
-
+Git ist ein Versionierungssystem für Dateien und Ordner in einem Projekt. 
 Das Repository für Verteilte Systeme 1 finden Sie auf GitHub:
 <https://github.com/zirpins/vs1lab>
 
@@ -20,16 +15,96 @@ Kollaboration und Versionierung dadurch erheblich erleichtert werden.
 Git kann auch lokal zur Versionierung genutzt werden. Hierzu ist kein Account
 notwendig.
 
+### Was ist Versionskontrolle?
+
+Versionskontrolle ist ein System, dass es erlaubt, an Programmen
+zusammenzuarbeiten, die Entwicklung besser nachzuverfolgen und viele weitere
+Dinge wie Continous Integration ermöglicht.
+
+Bei der Versionskontrolle erstellt man immer einmal wieder einen Snapshot des
+Projekts, gennant Commit. Diese Commits bilden einen Zeitstrahl, genannt Branch.
+
+#### Begriffe
+
+
+| Begriff    | Erklärung                                                                      |
+|------------|--------------------------------------------------------------------------------|
+| Repository | Ein Projekt, das mit Git verwaltet wird                                        |
+| Commit     | Ein Snapshot des Projekts                                                      |
+| Branch     | Zeitstrahl aus Snapshots (stark vereinfacht)                                   |
+| Remote     | Anderer Computer der eine Kopie des Repository besitzt                         |
+| Push       | Commits auf einen Branch auf einer Remote übertragen                           |
+| Pull       | Commits von einer Remote auf einen Branch auf dem eigenen Computer Übertragen  |
+| Clone      | Ein Repository von einer Remote auf den eigenen Computer kopieren              |
+| Fork       | Eine Kopie eines Repository die unabhängig vom Original weiterentwickelt wird  |
+| Fork       | Zwei Branches zusammenführen                                                   |
+| Fetch      | Informationen über eine Remote einholen                                        |
+| Checkout   | Die Arbeitsversion des Projekts auf einen bestimmten commit oder branch setzen |
+
+
+#### Visualisierung
+
+![branch](https://i.imgur.com/NgeftQK.png)
+
+#### Beispiel
+
+Alice und Bob Arbeiten am gleichen Programm. Zuerst klonen sie beide eine Kopie
+des Repository auf ihren Computer (haben dann also GitHub als Remote
+eingetragen).  Alice programmiert ein neues Feature und macht dabei ein paar
+Commits.  Diese Pusht sie dann auf GitHub. Bob sieht per git fetch, dass Alice
+das Programm weiter entwickelt hat und synchronisiert seinen main branch per
+git pull mit GitHub. Nun nehmen Bob und Alice beide gleichzeitig Änderungen vor
+und erstellen dabei Commits. Alice pusht ihre Commits auf GitHub. Kurz danach
+will Bob ebenfalls seine Commits pushen, allerdings bekommt er statdessen eine
+Warnung von Git. Würde Bob stur auf seine Zeitleiste bestehen würde er damit
+Alice's Änderungen überschreiben. Deshalb muss er zuerst pullen. Git versucht
+dabei per git merge, automatisch einen Merge-Commit zu erstellen, der sowohl
+Bobs als auch Alice's Änderungen enthält. In der Regel funktioniert dies auch.
+Sollte es dazu kommen, dass Bob und Alice die gleiche Zeile bearbeitet haben
+entsteht ein Merge Konflict und der Nutzer muss entscheiden welche Version der
+Zeile er behalten möchte. Nachdem Bob einen Merge-Commit erstellt hat, der die
+Arbeit beider enthält pusht er diesen auf GitHub, Alice pullt den Merge-Commit
+von GitHub um auf dem gleichen Stand zu sein wie Bob und beide arbeiten weiter.
+Um dauerhafte Merge-Konflikte zu vermeiden können Bob und Alice auch auf
+separaten Branches arbeiten, die nur selten gemerged werden (Siehe Visualisierung).
+
+??? note "Vereinfachungen"
+    Diese Erklärung ist stark vereinfacht. Ein branch ist technisch gesehen nur
+    ein Pointer, die Reihenfolge der Commits ist stattdessen in den Commits
+    gespeichert, die eine linked list bilden. Ein Commit ist auch keine
+    vollständige Kopie des Projekts, stattdessen enthält ein Commit nur die
+    Änderungen, die seit dem letztden Commit gemacht wurden (wodurch git sehr
+    speichereffizient ist)
+    
+
+
 ### Installation von Git
 
-Eine Übersicht zur Installation von Git erhalten Sie hier:
+#### Windows
 
-<https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
+https://git-scm.com/download/win
 
-Falls Sie direkt zu den Downloads springen möchten, finden Sie diese
-hier:
+#### Mac
 
-<https://git-scm.com/download>
+```sh
+xcode-select —install
+```
+
+#### Linux
+
+##### Ubuntu
+
+```sh
+sudo apt install git
+```
+
+##### Arch
+
+```sh
+sudo pacman -S git
+```
+
+#### Konfiguration
 
 Git nutzt zur Identifizierung eines Nutzers dessen Namen sowie
 Email-Adresse. Nach erfolgreicher Installation können Sie in der
@@ -42,29 +117,22 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.org
 ```
 
-Verifizieren Sie die Korrektheit der Eingabe im Folgenden durch prüfen
-der korrekten Werte:
 
-```sh
-git config user.name
-git config user.email
 
-```
+!!! tip "Authentifizierung bei GitHub"
+    Ein GitHub Account ist in der Regel sehr sicherheitskritisch, da Hacker mit
+    bearbeitungszugriff Schadcode in ein Programm einschleusen könnten.  Aus
+    diesem Grund lässt GitHub keinen Log-in per Passwort aus der Kommandozeile
+    mehr zu und erfordert stattdessen Authentifizierungsmethoden mit höherer
+    Sicherheit wie ssh-keys oder personal access tokens.
 
-sollte den von Ihnen gewählten Namen ausgeben.
+### Umsetzung für das Labor
 
-### Das Repository forken
+#### Forken
 
-Grundsätzlich haben Sie viele verschiedene Möglichkeiten, mit Git an
-einem Projekt zu arbeiten. Wir werden im Folgenden auf die für unseren
-Fall am besten geeignete Methode eingehen: Das sogenannte „Forken" des
-vs1lab-Repositories.
-
-Beim Forken wird das Repository quasi in ein neues Repository kopiert,
-welches dem eigenen Nutzer gehört. In diesem Repository können dann, im
-Gegensatz zum Original-Repository von Herrn Dr. Zirpins, auch ohne
-Probleme Änderungen vorgenommen werden, ohne das originale Repository zu
-verändern.
+Beim Forken wird eine Kopie des Repository angelegt, welches dem eigenen Nutzer
+gehört. In diesem Repository können dann  Änderungen vorgenommen werden, ohne
+das originale Repository von Herrn Dr. Zirpins zu verändern.
 
 Melden Sie sich bei GitHub an und navigieren Sie zum Repository „vs1lab"
 (Link siehe oben).
@@ -96,14 +164,12 @@ Führen Sie dann den Befehl mit der URL zu Ihrem Fork aus:
 git clone https://github.com/<username>/vs1lab
 ```
 
-Falls Ihr Fork privat ist, fragt die Git-Anwendung nach Zugangsdaten zu
-GitHub.com.
-
 Nach dem erfolgreichen Klonen des Repositories auf den lokalen Rechner
 kann nun problemlos (auch mit mehreren Teammitgliedern) parallel am
 Projekt gearbeitet werden.
 
-### Gemeinsam an Aufgaben arbeiten
+
+#### Gemeinsam an Aufgaben arbeiten
 
 Damit mehrere Mitglieder Zugriff auf ein GitHub-Repository haben, muss
 dieser zuerst konfiguriert werden. Gehen Sie hierzu in GitHub auf den
@@ -116,103 +182,58 @@ medium confidence](img/git/image3.png)
 Ihre Teammitglieder befolgen dann dieselben Schritte wie aus Abschnitt
 2, um das Repository auf ihren lokalen Rechner zu klonen.
 
-Um parallel an Code zu arbeiten, ohne sich gegenseitig zu stören, stellt
-Git eine Funktion namens „Branches" bereit. Ein Branch ist vereinfacht
-gesagt ein Abbild des Codes zu dem Zeitpunkt, an dem der Branch erstellt
-wurde. Änderungen werden dann auf diesem Branch gespeichert und
-irgendwann wieder in den Ausgangsbranch zurückgeführt.
+Um parallel an Code zu arbeiten, ohne sich gegenseitig zu stören kann auf
+separaten Branches gearbeitet werden.
 
 Der Hauptbranch bei Git heißt meist „master" (in neueren Repositories
 auch „main"). Die Branches selbst können frei benannt werden.
 
-Ein Beispiel: Alice und Bob wollen nach erfolgreichem Klonen des
-Repositories auf Ihre lokalen Rechner gemeinsam an der Bearbeitung der
-Aufgaben arbeiten. Dazu erstellen beide einen eigenen Branch:
-
+Ein neuer branch kann mit
 ```sh
 git checkout -b <branch-name>
 ```
+erstellt werden. 
 
-(Der Befehl "checkout" wird zum Wechseln von Branches verwendet. Das
+(Der Befehl "checkout" wird zum Wechseln von Branches/Commits verwendet. Das
 Argument „-b" erzeugt dann einen neuen Branch.)
 
-Alice erstellt beispielsweise den Branch „html-und-css", während Bob den
-Branch „javascript" erstellt. Beide können nun unabhängig voneinander
-Ihre Aufgaben bearbeiten. Doch wie werden Änderungen zwischen Alice und
-Bob synchronisiert?
-
-Wenn Alice Änderungen an Ihrem Branch vorgenommen hat, dann muss Sie
-diese Änderungen speichern. Git nennt diesen Prozess einen Commit: Es
-können bestimmte Änderungen gewählt und gespeichert werden. Hierfür
-werden zuerst die Dateien zum sogenannten Index (einer Art
-Zwischenspeicher) hinzugefügt, die am Ende im Commit landen sollen. Nach
-dem Commit (Der Commit speichert die Änderungen aus dem Index mit
-zusammen mit einer Nachricht ab) muss Alice Ihre gespeicherten
-Änderungen an GitHub senden. Dieser Prozess nennt sich „Push".
-
+Neue Änderungen werden in einem Commit gespeichert. 
 ```sh
+# Alle Änderungen aus allen Dateien für den nächsten Commit vormerken
 git add --all
+# oder um nur eine datei vorzumerken
+git add pfad/zur/datei.js
+
+# Commit erstellen
 git commit -m "Beschreibung der Änderung"
+# Commit auf die GitHub remote übertragen
 git push
 
 ```
 
-(Möglicherweise beschwert sich Git, dass kein Upstream-Branch existiert.
+Möglicherweise beschwert sich Git, dass kein Upstream-Branch existiert.
 In diesem Fall müssen Sie explizit angeben, auf welchen Branch der Push
 ausgeführt werden werden soll. Für unsere Fälle gibt es keinen Grund,
 nicht einfach denselben Branch zu verwenden. Der Push-Command lautet
 dann:
 
 ```sh
+# origin ist der standard remote name
 git push --set-upstream origin <branch-name>
 ```
 
-
-Anstelle des Parameters „\--all" können auch einzelne Dateien angegeben
-werden. Nach Erfolgreichem Ausführen des Pushes sind die Änderungen auf
-GitHub sichtbar. Wenn Bob nun die Änderungen von Alice herunterladen
-möchte, so muss er sich zuerst die Änderungen holen, und sie dann in
-seinen eigenen Branch integrieren:
-
+Commits von GitHub können mit `git pull` auf den eigenen branch übertragen werden
+Um Änderungen von einem anderen branch auf den momentanen branch zu übertragen kann der befehl
 ```sh
-
-git pull
-git merge <alice's-branch-name>
+git merge <branch name>
 ```
+verwendet werden.
 
-Um sich im Repository zurechtzufinden, gibt es noch einige weitere
-Befehle, die zwischendurch nützlich sein können:
 
-```sh
-git status
-```
+#### Änderungen des Original-Repositories nachladen
 
-zeigt den Zustand des Repositories, inklusive aller geänderten Dateien
-und Dateien, die zum aktuellen Commit hinzugefügt worden sind
-
-```sh
-git branch
-```
-
-zeigt den aktuell ausgewählten Branch, sowie weitere verfügbare
-Branches.
-
-```sh
-git log --oneline --all
-```
-
-zeigt eine Historie aller vorangehenden Commits.
-
-Sind Alice und Bob mit Ihren Änderungen fertig, so kann der jeweilige
-Branch wieder in den Hauptbranch zurückgeführt werden. Hierzu wechselt
-man auf den Hauptbranch und integriert dann den jeweils anderen Branch:
-
-```sh
-git checkout master
-git merge <alice's-branch-name>
-```
-
-### Änderungen des Original-Repositories nachladen
+!!! todo
+    kann diese section weg?
 
 Im Laufe der Vorlesung wird das Original-Repository erweitert. In diesem
 Fall müssen die Änderungen des originalen Repositories in den Fork
@@ -224,7 +245,9 @@ Das standardmäßige Remote-Repository trägt den Namen „origin" und ist
 bereits vorhanden, es referenziert den Fork. Um das vs1lab als neues
 Remote-Repository hinzuzufügen, führen Sie den folgenden Befehl aus:
 
+```sh
 git remote add upstream https://github.com/zirpins/vs1lab.git
+```
 
 Überprüfen Sie danach die Existenz beider Remote-Repositories, indem Sie
 
@@ -259,12 +282,12 @@ generated](img/git/image5.png)
 
 ### Ein Wort zum Git Tooling
 
-Neben der Kommandozeile, die wir hier kennengelernt haben, gibt es auch
-viele grafische Benutzeroberflächen, mit denen dieselben Abläufe
-erreicht werden können. WebStorm und VSCode beispielsweise binden direkt
-eine Git-Integration ein. Auch GitHub selbst bietet eine grafische
-Benutzeroberfläche für das Verwalten von Git-Repositories an. Die Wahl
-des Werkzeuges bleibt letztendlich Ihnen überlassen.
+Neben der Kommandozeile, die wir hier kennengelernt haben, gibt es auch viele
+grafische Benutzeroberflächen, mit denen dieselben Abläufe erreicht werden
+können. VSCode und Webstorm beispielsweise binden direkt eine Git-Integration
+ein. Es gibt auch diverse standalone Git Oberflächen wie Gitahead, Sublime
+Merge und GitKraken. Die Wahl des Werkzeuges bleibt letztendlich Ihnen
+überlassen.
 
 !!! tip "Hilfreiche Links"
     Der einfache Einstieg in Git:
@@ -280,21 +303,30 @@ des Werkzeuges bleibt letztendlich Ihnen überlassen.
 
 ### Allgemeines
 
-VS-Code oder Visual Studio Code ist eine offene Entwicklungsumgebung von
+VS-Code, Visual Studio Code oder Code-OSS [*](#linux) ist eine offene Entwicklungsumgebung von
 Microsoft (nicht zu verwechseln mit Visual Studio). Das Tool ist sehr
 universell ausgelegt und auf keine bestimmte Programmiersprache oder
 Technologie zugeschnitten. Stattdessen kann der Support für Sprachen oder
 Features über Extensions installiert werden. So wird VS code zur IDE für Java,
 C, Web, Rust, Latex etc.
 
+??? info "VS Code vs Code-OSS"
+    Das Produkt VS Code ist eine modifizierte Version des Open-Source Editors
+    Code-OSS. Bei Code-OSS fehlt das Microsoft-Branding, das Sammeln von
+    Persönlichen Daten und aus [unerklärlichen
+    Gründen](https://pics.me.me/thumb_hmmm-5960402.png) die Adresse des
+    Extension-Marketplace. Diese Kann allerdings [manuell
+    hinzugefügt](https://stackoverflow.com/questions/64463768/cant-find-certain-extensions-in-code-ossopen-source-variant-of-visual-studio-c)
+    werden
+
 ### Installation
 
-### Windows & Mac
+#### Windows & Mac
 
 Das Setup kann unter der folgenden Adresse heruntergeladen werden:
 [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-### Linux
+#### Linux
 
 Ubuntu
 ```sh
@@ -307,28 +339,55 @@ git clone https://aur.archlinux.org/visual-studio-code-bin.git
 cd visual-studio-code-bin
 makepkg -si
 ```
+### Tips
 
-???+ tip "VS Code vs Code-OSS"
-    Das Produkt VS Code ist eine modifizierte Version des Open-Source Editors
-    Code-OSS. Bei Code-OSS fehlt das Microsoft-Branding, das Sammeln von
-    Persönlichen Daten und aus [unerklärlichen
-    Gründen](https://pics.me.me/thumb_hmmm-5960402.png) die Adresse des
-    Extension-Marketplace. Diese Kann allerdings [manuell
-    hinzugefügt](https://stackoverflow.com/questions/64463768/cant-find-certain-extensions-in-code-ossopen-source-variant-of-visual-studio-c)
-    werden
-    
+#### Set up für das labor
 
+Nach dem klonen des Forks von GitHub kann der Ordner mit ++ctrl+k++ - ++o++
+(Ctrl gedrückt halten und währenddessen hintereinander k und o drücken) in vs
+code geöffnet werden. Wenn der Ordner das erste mal geöffnet wird muss er als
+vertrauenswürdig bestätigt werden.
+
+#### Nützliche Shortcuts
+
+
+| Keybind          | Funktion                                          |
+|------------------|---------------------------------------------------|
+| ++ctrl+s++       | Speichern                                         |
+| ++ctrl+p++       | Datei Fuzzy-Finder                                |
+| ++ctrl+shift+p++ | Kommando Palette                                  |
+| ++ctrl+r++       | Wechseln zwischen oft verwendeten Projekt Ordnern |
+| ++ctrl+shift+i++ | Dokument formattieren **(Super Hilfreich!!!!)**   |
+
+!!! todo
+    noch mehr shortcuts
+
+#### Extensions
+
+Es gibt eine EJS extension, die die Arbeit mit EJS im Labor wesentlich vereinfacht.
+
+Die Autocompletion lässt sich durch GitHub-Copilot oder TabNine (Bitte nur eine von beiden installieren) um einiges verbessern.
+
+Sonarlint weist automatisch auf potentiell problematischen oder fehlerhaften Code hin und bietet lösungsansätze an.
+
+#### Git
+
+VS code hat eine gute Git-Integration, die pushen, commiten und das interaktive
+lösen von Merge-Konflikten erlaubt. Der Funktionsumfang kann mithilfe der
+extension GitLens auch erweitert werden.
 
 ### Remote container
 
-Die Remote extension erlaubt es, sich mit einem Container zu verbinden und
-diesen als entwicklungsumgebung zu nutzen.  Wenn eine Verbindung zu einem
-Container besteht werden alle Dateien im VS code workspace im container
-gespeichert und alle programme, die VSC startet laufen im Container.
+Die Remote Extension erlaubt es, sich mit einem Container (oder Server) zu verbinden und
+diesen als Entwicklungsumgebung zu nutzen.  Wenn eine Verbindung zu einem
+Container besteht werden alle Dateien im VS Code Workspace im Container
+gespeichert und alle Programme, die VSC startet laufen im Container.
 
 #### Installation
 
 ![installation](https://i.imgur.com/hpwiDNL.png)
+
+
 
 #### Nutzung
 
@@ -349,6 +408,13 @@ Der Große Vorteil an Containern ist, dass sie sich als container images
 beliebig verbreiten lassen. Da ein Container sein eigenes Betriebssystem
 enthält ist garantiert dass er überall genau so funktioniert wie auch auf dem
 eigenen Computer.
+
+Docker ist das meistgenutzte Programm und Format zum verwalten von Containern
+
+??? note "Container Orchestration"
+    Die Nutzung von Docker findet in der Produktion meist automatisiert durch
+    Tools wie Kubernetes statt, die je nach bedarf Container anlegen, löschen
+    oder neu starten.
 
 Um die gute Performanz zu erreichen verwendet Docker einige Technologien, die
 nur im Linux Kernel vorhanden sind, weshalb Docker für Windows und Mac beide in
@@ -400,6 +466,18 @@ Diese allerdings mithilfe von [WSL2](https://docs.docker.com/desktop/windows/ins
 command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew cask install docker
 ```
+### Nutzung
+
+Es gibt eine Vielzahl von Möglichkeiten, Docker zu nutzen. Die
+Standard-Installation von Docker kommt mit dem Terminal Command `docker` und es
+sind interaktive terminal Oberflächen wie lazydocker verfügbar, allerdings gibt
+es auch grafische Oberflächen wie die Docker extension für VS-Code, Docker
+Desktop. 
+
+!!! tip "GUI vs Kommandozeile"
+    Es ist zu empfehlen, zumindest ein wenig Erfahrung mit der Kommandozeile
+    von Docker oder lazydocker zu haben, da Docker meist auf dem Server genutzt
+    wird und Server in der Regel nur über die Kommandozeile bedient werden. 
 
 
 ## Debuggen in Google Chrome
