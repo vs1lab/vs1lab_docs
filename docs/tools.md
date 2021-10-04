@@ -229,57 +229,6 @@ git merge <branch name>
 ```
 verwendet werden.
 
-
-#### Änderungen des Original-Repositories nachladen
-
-!!! todo
-    kann diese section weg?
-
-Im Laufe der Vorlesung wird das Original-Repository erweitert. In diesem
-Fall müssen die Änderungen des originalen Repositories in den Fork
-übernommen werden. Hierzu kann eine Referenz auf das originale
-Repository hinzugefügt werden, dessen Branches dann nach demselben
-Prinzip in den Fork integriert werden können wie oben bereits gesehen.
-
-Das standardmäßige Remote-Repository trägt den Namen „origin" und ist
-bereits vorhanden, es referenziert den Fork. Um das vs1lab als neues
-Remote-Repository hinzuzufügen, führen Sie den folgenden Befehl aus:
-
-```sh
-git remote add upstream https://github.com/zirpins/vs1lab.git
-```
-
-Überprüfen Sie danach die Existenz beider Remote-Repositories, indem Sie
-
-```sh
-git remote -v
-```
-
-ausführen:
-
-![Graphical user interface, text Description automatically
-generated](img/git/image4.png)
-
-Danach laden Sie die Änderungen des vs1lab und integrieren Sie in Ihren
-eigenen „master"-Branch:
-
-```sh
-git fetch upstream
-git checkout master
-git merge upstream/master
-
-```
-Der Master-Branch Ihres lokalen Repositories ist nun aktuell. Wie weiter
-oben beschrieben können Sie die Änderungen nun in Ihre eigenen Branches
-integrieren. Denken Sie auch daran, git push auszuführen, um den
-Teammitgliedern die Änderungen am „master"-Branch zur Verfügung zu
-stellen.
-
-Hier ein Beispielablauf:
-
-![Text Description automatically
-generated](img/git/image5.png)
-
 ### Ein Wort zum Git Tooling
 
 Neben der Kommandozeile, die wir hier kennengelernt haben, gibt es auch viele
