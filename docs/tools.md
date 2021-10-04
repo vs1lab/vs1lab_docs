@@ -370,6 +370,12 @@ Die Autocompletion lässt sich durch GitHub-Copilot oder TabNine (Bitte nur eine
 
 Sonarlint weist automatisch auf potentiell problematischen oder fehlerhaften Code hin und bietet lösungsansätze an.
 
+Live server
+Mithilfe des **Go Live** Buttons unten rechts, der mit der Live Server Erweiterung installiert wurde, lässt sich ein Web-Server starten. Änderungen an den Projektdateien werden, sobald diese gespeichert wurden, sofort im Browser sichtbar.
+
+![image20](img/image20.png)
+
+
 #### Git
 
 VS code hat eine gute Git-Integration, die pushen, commiten und das interaktive
