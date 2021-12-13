@@ -168,10 +168,25 @@ jedem Speichern und Filtern die komplette Seite serverseitig generiert
 und übermittelt werden muss.
 
 Wenn ihr euer Serverscript entsprechend angepasst habt und eure
-REST-Schnittstelle vorab testen wollt, empfiehlt es sich diese mit den
-in der Aufgabenstellung vorgeschlagenen Tools zu testen (Postman,
-insomnia, etc.). Dadurch könnt ihr Fehler frühzeitig ausfindig machen
-und beheben und spart euch später viel Ärger mit lästigem debuggen.
+REST-Schnittstelle vorab testen wollt, empfiehlt es sich diese mit einem
+generischen REST Client zu testen.  
+Zu empfehlen sind hier
+
+Insomnia/Postman:
+GUI Programme um requests zu erstellen und zu senden
+
+Hoppscotch:
+Browser-Extension, ähnlich wie Insonmia/Postman aber ohne Download und mit google-docs like cloud-speicherung
+
+VS-Code rest client:
+Extension mit der sich Requests die in Textform in einer Datei stehen absenden lassen können
+
+Curl:
+Command-line-interface für die Production-Ready http bibliothek libcurl
+
+
+Durch das Testen könnt ihr Fehler frühzeitig ausfindig machen und beheben und
+spart euch später viel Ärger mit lästigem debuggen.
 
 **Die genaue Aufgabenbeschreibung findet ihr in den README.md Dateien im
 Ordner der jeweiligen Aufgabe.**
