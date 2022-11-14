@@ -1,12 +1,14 @@
-# TEIL A – HTML
+# Laborhilfe Aufgabe_1
+
+## TEIL A – HTML
 
 [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 ![](img/HTML_Seitenstruktur.jpg)
 
 ![](img/DOM_Diagram.png)
-  _________
-## Head: Metadaten
+
+### Head Metadaten
   - **meta charset = „UTF-8":** Kodierung in UTF-8 Characters
   - **meta name = „viewport":** Display-Information, Display-Größe vom Gerät
   - **meta content = „content":** Enthält Wert vom Element gekennzeichnet durch „name"
@@ -14,38 +16,35 @@
   - **link:**
     - **rel:** Relationship zum verlinkten Dokmuent
     - **href:** Pfad/ Link-URL
-  _________
-## Body: Inhalt der GeoLocationApp
+
+### Body 
+**Inhalt der GeoLocationApp**
   - **Header** : Obere Leiste, meist mit Logo, Titel, Navigation
   - **Main:** Hauptinhalt mit Vielzahl an verschiedenen Strukturelementen
   - **Footer** : Untere Leiste meist mit Kontakt, Impressum, Copyright, Sitemap
   _________
-## Class-Attribut
+### Class-Attribut
   - Globales Attribut
   - Durch Leerzeichen-getrennte Liste von Case-Sensitive Element-Klassen
   - Erlauben die Auswahl und Zugang von CSS und JavaScript zu spezifischen Elementen durch Class-Selectors (z.B. documtent.getElementByClassName)
   _________
-## Header
+### Header
   - **nav** : Section-Element einer Seite die Links zu anderen Seiten enthält (Navigation)
   ![](img/Header_Nav.png)
   _________
 
-## Main
+### Main
   - **section** : Abschnitt, meist eines Textes, sollten immer eine Überschrift haben
     - **Child** -Elements: Überschriften, Formulare, div-Container, und mehr.
-
 
   - **form** : Sektion mit interaktiven Controls/ Feldern, um Informationen gebündelt zu senden
 
     - **Attribute**
       - **id:** Eindeutiger Bezeichner für Formular
       - **action** : URL, die das Submit der gesendeten Formular-Infos bearbeitet
-
-
       - **method** : http Methode mit der submitted wird
         - **Post** : Daten als Request Body gesendet
-        - **Get** : Daten beigefügt mit ? seperator (Seitenanfrage),
- ohne selber Infos zu schicken
+        - **Get** : Daten beigefügt mit ? seperator (Seitenanfrage), ohne selber Infos zu schicken
     - **Child-Elements:** fieldset
 
   - **h1 bis h8:** Überschriften (h1 größte, h8 kleinste)
@@ -91,17 +90,15 @@
       - value: fester/fixer eingetragener Wert meist mit readonly
       - readonly: nur lesbar, nicht überschreibbar
       
-## footer
+### footer
   - **span:** Generischer Container für Inline (Einzeiler), zur Gruppierung verwendbar
 
     - Ähnlich wie div (aber div ist Block-Element)
     - Hervorheben von bestimmten Wörtern in Text
 
-________________________
+## TEIL B - CSS
 
-# TEIL B - CSS
-  ____
-## Allgemeine Infos
+### Allgemeine Infos
 
 - CSS-Template enthält Regelmengen für Klassen/ Classes „.row" und „.col-x"
 
@@ -114,7 +111,7 @@ ________________________
 - .col-x =\> 1/3 of right box for taglist (left box of discovery)
 - .col-x =\> 2/3 of right box for map image (right box of discovery)
   ____
-## Flexbox-Guide
+### Flexbox-Guide
 [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 - Style-Regeln die sich auf mehrere HTML-Elemente gleich auswirken können zusammengefasst werden
@@ -123,7 +120,7 @@ ________________________
 
 ![](img/CSS_Selector%20Syntax.png)
   ____
-## Selectors
+### Selectors
 
 ### Beispiele
 - input:not(:last-child) =\> wendet die folgenden Style-Regeln für alle Input-Felder außer dem letzten an
@@ -205,7 +202,7 @@ h2 würde sich auf alle h2-Elemente beziehen
 - Media Queries
 ____
 
-# Media-Queries**
+## Media-Queries**
 
 ![](img/MediaQuery_Syntax.png)
 
