@@ -1,0 +1,882 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Laborhilfe Aufgabe_1 - VS1 Labor</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#laborhilfe-aufgabe_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="VS1 Labor" class="md-header__button md-logo" aria-label="VS1 Labor" data-md-component="logo">
+      
+  <img src="../assets/hka.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VS1 Labor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Laborhilfe Aufgabe_1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VS1 Labor" class="md-nav__button md-logo" aria-label="VS1 Labor" data-md-component="logo">
+      
+  <img src="../assets/hka.png" alt="logo">
+
+    </a>
+    VS1 Labor
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Laboranleitung
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Laborhilfe Aufgabe_1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Laborhilfe Aufgabe_1
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teil-a-html" class="md-nav__link">
+    TEIL A – HTML
+  </a>
+  
+    <nav class="md-nav" aria-label="TEIL A – HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#head-metadaten" class="md-nav__link">
+    Head Metadaten
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-attribut" class="md-nav__link">
+    Class-Attribut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    Main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    footer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-b-css" class="md-nav__link">
+    TEIL B - CSS
+  </a>
+  
+    <nav class="md-nav" aria-label="TEIL B - CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allgemeine-infos" class="md-nav__link">
+    Allgemeine Infos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexbox-guide" class="md-nav__link">
+    Flexbox-Guide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectors" class="md-nav__link">
+    Selectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mogliche-style-regeln" class="md-nav__link">
+    Mögliche Style-Regeln
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex-direction" class="md-nav__link">
+    flex-direction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-regeln-umsetzen-fur" class="md-nav__link">
+    Style-Regeln umsetzen für
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-queries" class="md-nav__link">
+    Media-Queries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../z_github_desktop/" class="md-nav__link">
+        GitHub Desktop
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teil-a-html" class="md-nav__link">
+    TEIL A – HTML
+  </a>
+  
+    <nav class="md-nav" aria-label="TEIL A – HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#head-metadaten" class="md-nav__link">
+    Head Metadaten
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-attribut" class="md-nav__link">
+    Class-Attribut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    Main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    footer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-b-css" class="md-nav__link">
+    TEIL B - CSS
+  </a>
+  
+    <nav class="md-nav" aria-label="TEIL B - CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allgemeine-infos" class="md-nav__link">
+    Allgemeine Infos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexbox-guide" class="md-nav__link">
+    Flexbox-Guide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectors" class="md-nav__link">
+    Selectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mogliche-style-regeln" class="md-nav__link">
+    Mögliche Style-Regeln
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex-direction" class="md-nav__link">
+    flex-direction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-regeln-umsetzen-fur" class="md-nav__link">
+    Style-Regeln umsetzen für
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-queries" class="md-nav__link">
+    Media-Queries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="laborhilfe-aufgabe_1">Laborhilfe Aufgabe_1</h1>
+<h2 id="teil-a-html">TEIL A – HTML</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a></p>
+<p><img alt="" src="../img/HTML_Seitenstruktur.jpg" /></p>
+<p><img alt="" src="../img/DOM_Diagram.png" /></p>
+<h3 id="head-metadaten">Head Metadaten</h3>
+<ul>
+<li><strong>meta charset = „UTF-8":</strong> Kodierung in UTF-8 Characters</li>
+<li><strong>meta name = „viewport":</strong> Display-Information, Display-Größe vom Gerät</li>
+<li><strong>meta content = „content":</strong> Enthält Wert vom Element gekennzeichnet durch „name"</li>
+<li><strong>title:</strong> Beschreibung im Tab</li>
+<li><strong>link:</strong><ul>
+<li><strong>rel:</strong> Relationship zum verlinkten Dokmuent</li>
+<li><strong>href:</strong> Pfad/ Link-URL</li>
+</ul>
+</li>
+</ul>
+<h3 id="body">Body</h3>
+<p><strong>Inhalt der GeoLocationApp</strong>
+  - <strong>Header</strong> : Obere Leiste, meist mit Logo, Titel, Navigation
+  - <strong>Main:</strong> Hauptinhalt mit Vielzahl an verschiedenen Strukturelementen
+  - <strong>Footer</strong> : Untere Leiste meist mit Kontakt, Impressum, Copyright, Sitemap</p>
+<h3 id="class-attribut">Class-Attribut</h3>
+<ul>
+<li>Globales Attribut</li>
+<li>Durch Leerzeichen-getrennte Liste von Case-Sensitive Element-Klassen</li>
+<li>Erlauben die Auswahl und Zugang von CSS und JavaScript zu spezifischen Elementen durch Class-Selectors (z.B. documtent.getElementByClassName)</li>
+</ul>
+<h3 id="header">Header</h3>
+<ul>
+<li><strong>nav</strong> : Section-Element einer Seite die Links zu anderen Seiten enthält (Navigation)
+  <img alt="" src="../img/Header_Nav.png" /></li>
+</ul>
+<h3 id="main">Main</h3>
+<ul>
+<li>
+<p><strong>section</strong> : Abschnitt, meist eines Textes, sollten immer eine Überschrift haben</p>
+<ul>
+<li><strong>Child</strong> -Elements: Überschriften, Formulare, div-Container, und mehr.</li>
+</ul>
+</li>
+<li>
+<p><strong>form</strong> : Sektion mit interaktiven Controls/ Feldern, um Informationen gebündelt zu senden</p>
+<ul>
+<li><strong>Attribute</strong></li>
+<li><strong>id:</strong> Eindeutiger Bezeichner für Formular</li>
+<li><strong>action</strong> : URL, die das Submit der gesendeten Formular-Infos bearbeitet</li>
+<li><strong>method</strong> : http Methode mit der submitted wird<ul>
+<li><strong>Post</strong> : Daten als Request Body gesendet</li>
+<li><strong>Get</strong> : Daten beigefügt mit ? seperator (Seitenanfrage), ohne selber Infos zu schicken</li>
+</ul>
+</li>
+<li><strong>Child-Elements:</strong> fieldset</li>
+</ul>
+</li>
+<li>
+<p><strong>h1 bis h8:</strong> Überschriften (h1 größte, h8 kleinste)</p>
+</li>
+<li>
+<p><strong>div:</strong> Container zur Isolierung von verschiedenen flow contents</p>
+<ul>
+<li>Möglich verschiedene div-Container verschieden zu Stylen</li>
+<li>Kapselt Informationen voneinander (unterschiedliche Darstellung)</li>
+<li><strong>Flow Content</strong> : Alle Strukturelemente, die direkte Child-Elemente von \&lt;body> sind</li>
+<li><strong>Kein Flow Content:</strong> \&lt;td>, da es nur als direkter Child von \&lt;table> genutzt werden kann</li>
+</ul>
+</li>
+<li>
+<p><strong>ul:</strong> Ungeordnete Liste (unordered list = ul) mit einfachen Aufzählungspunkten</p>
+</li>
+<li><strong>ol</strong> : Geordnete Liste (ordered list = ol) mit Nummerierung</li>
+<li>
+<p><strong>li:</strong> Listen-Element (list item = li) von einer Liste (ol oder ul)</p>
+</li>
+<li>
+<p><strong>img:</strong> eingebettetes Bild</p>
+<ul>
+<li><strong>Attribute:</strong></li>
+<li><strong>src:</strong> Quelle/Pfad</li>
+<li><strong>alt:</strong> alternativer Text, wenn Bild nicht lädt</li>
+<li><strong>id:</strong> eindeutiger Bezeichner eines Bildes</li>
+</ul>
+</li>
+<li>
+<p><strong>fieldset:</strong> gruppiert Kontrollelemente und Labels innerhalb einer Form</p>
+</li>
+<li>
+<p><strong>legend:</strong> Caption/ Beschreibung für den Inhalt von fieldset</p>
+</li>
+<li>
+<p><strong>label:</strong> Caption für ein Kontrollelement/ User Interface</p>
+<ul>
+<li><strong>Attribute</strong></li>
+<li><strong>for:</strong> gibt an für welches Element das Label ist, angegeben durch „id"</li>
+</ul>
+</li>
+<li>
+<p><strong>input:</strong> für interaktive Kontrollelemente in Formularen, um Daten zu senden</p>
+<ul>
+<li><strong>Attribute</strong></li>
+<li>input-types: checkbox, button, hidden, mail, password, …</li>
+<li>name: Kontroll-Element-Name</li>
+<li>id: eindeutiger Bezeichner für input-Element</li>
+<li>placeholder: Beispieltext der überschrieben werden kann</li>
+<li>pattern: Erlaubter Eingabetext</li>
+<li>maxlength: maximale Wortlänge</li>
+<li>required: muss ausgefüllt werden</li>
+<li>disabled: deaktiviert (keine Eingabe mögliche, ausgegraut)</li>
+<li>value: fester/fixer eingetragener Wert meist mit readonly</li>
+<li>readonly: nur lesbar, nicht überschreibbar</li>
+</ul>
+</li>
+</ul>
+<h3 id="footer">footer</h3>
+<ul>
+<li>
+<p><strong>span:</strong> Generischer Container für Inline (Einzeiler), zur Gruppierung verwendbar</p>
+<ul>
+<li>Ähnlich wie div (aber div ist Block-Element)</li>
+<li>Hervorheben von bestimmten Wörtern in Text</li>
+</ul>
+</li>
+</ul>
+<h2 id="teil-b-css">TEIL B - CSS</h2>
+<h3 id="allgemeine-infos">Allgemeine Infos</h3>
+<ul>
+<li>
+<p>CSS-Template enthält Regelmengen für Klassen/ Classes „.row" und „.col-x"</p>
+</li>
+<li>
+<p>Erstellte HTML Struktur-Elemente von TEIL A entsprechend als Zeile/ Spalte kennzeichnen, durch hinzufügen von jeweiligen class name</p>
+</li>
+</ul>
+<p><strong>Mögliche Aufteilung</strong></p>
+<ul>
+<li>.col-x => 1/4 of main box for tagging (left box)</li>
+<li>.col-x => 3/4 of main box for discovery (right box)</li>
+<li>.col-x => 1/3 of right box for taglist (left box of discovery)</li>
+<li>.col-x => 2/3 of right box for map image (right box of discovery)</li>
+</ul>
+<h3 id="flexbox-guide">Flexbox-Guide</h3>
+<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+<ul>
+<li>Style-Regeln die sich auf mehrere HTML-Elemente gleich auswirken können zusammengefasst werden</li>
+<li>Nachträglich kann für Unterschiede nochmals Regeln für die Elemente einzeln definiert werden</li>
+<li>Style-Regeln wirken der Reihenfolge nach in der sie definiert werden</li>
+</ul>
+<p><img alt="" src="../img/CSS_Selector%20Syntax.png" /></p>
+<h3 id="selectors">Selectors</h3>
+<p><strong>Beispiele</strong>
+- input:not(:last-child) => wendet die folgenden Style-Regeln für alle Input-Felder außer dem letzten an
+- input:hover => -//- wenn Mauszeiger über Input-Feld
+- <a href="https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0">https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0</a>
+- <a href="https://htmlcheatsheet.com/css/">https://htmlcheatsheet.com/css/</a></p>
+<p><strong>Anwendung</strong>
+- Klassen-Selektor nutzen
+- Ggf. neue Klassen zu HTML-Struktur-Elementen zufügen</p>
+<ul>
+<li>Spezifisches Selektieren von Elementen innerhalb einer Klasse möglich</li>
+<li>Z.B. wenn man nur die Überschriften innerhalb Tagging stylen möchte und nicht die von Discovery:</li>
+</ul>
+<p>h2 würde sich auf alle h2-Elemente beziehen</p>
+<p>.main_tagging h2 bezieht sich nur auf h2-Elemente innerhalb der Klasse .main_tagging</p>
+<ul>
+<li>Reihenfolge wichtig:</li>
+<li>z.B. Ausrichtung soll für jede Überschrift gleich sein: center</li>
+<li>Aber Farbe soll unterschiedlich sein abhängig von Klasse</li>
+</ul>
+<p><img alt="" src="../img/Selector_Example.png" /></p>
+<h3 id="mogliche-style-regeln">Mögliche Style-Regeln</h3>
+<p><strong>Other HTML elements you have to style</strong>
+- Überschriften h1-h8
+- fieldset
+- label
+- input</p>
+<p><strong>Beispiel-Attribute</strong>
+- margin: Platz zwischen der Grenze eines Elements zur Grenze eines angrenzenden Elements
+- padding: Platz zwischen Element-Inhalt und Element-Grenze
+- border: Grenze, an der das Element endet
+- -bottom/-top, margin-right/-left (für margin, padding, border)
+- display: Positionierung von Elementen (block, inline)</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display?retiredLocale=de">https://developer.mozilla.org/en-US/docs/Web/CSS/display?retiredLocale=de</a></p>
+<ul>
+<li>
+<p>color: Farbe des Elements (letzt definierte Farbe gilt)</p>
+</li>
+<li>
+<p>line-heigth: Höhe eines Elements</p>
+</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">https://developer.mozilla.org/en-US/docs/Web/CSS/line-height</a></p>
+<ul>
+<li>cursor: Darstellung des Mauszeigers über einem Element</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor?retiredLocale=de">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor?retiredLocale=de</a></p>
+<ul>
+<li>appearance: Darstellung von UI Controls</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/appearance">https://developer.mozilla.org/en-US/docs/Web/CSS/appearance</a></p>
+<ul>
+<li>transition: Übergang zwischen zwei Phasen/ States eines Elements
+ Verzögerung (Delay), Dauer (Duration), Property (Eigenschaften)</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition?retiredLocale=de">https://developer.mozilla.org/en-US/docs/Web/CSS/transition?retiredLocale=de</a></p>
+<ul>
+<li>align-items: Ausrichtung aller direkter Child-Elemente</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items?retiredLocale=de">https://developer.mozilla.org/en-US/docs/Web/CSS/align-items?retiredLocale=de</a></p>
+<h3 id="flex-direction">flex-direction</h3>
+<ul>
+<li>Gibt an, wie die Items innerhalb eines Flex-Containers angeordnet werden (axis/ direction)</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"><strong>https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction</strong></a></li>
+<li>Media-Queries: Sollte bei Handy-Bildschirmen z.B. column sein mit width = 100%, damit die Elemente untereinander rutschen</li>
+</ul>
+<h3 id="style-regeln-umsetzen-fur">Style-Regeln umsetzen für</h3>
+<ul>
+<li>Header-Component</li>
+<li>Main-Component</li>
+<li>Tagging-Component</li>
+<li>Discovery-Component</li>
+<li>Footer-Component</li>
+<li>Media Queries</li>
+</ul>
+<h2 id="media-queries">Media-Queries</h2>
+<p><img alt="" src="../img/MediaQuery_Syntax.png" /></p>
+<p><img alt="" src="../img/MediaQuery_example.png" /></p>
+<p><a href="https://www.w3schools.com/css/css3_mediaqueries.asp"><strong>https://www.w3schools.com/css/css3_mediaqueries.asp</strong></a></p>
+<ul>
+<li>@media: Kennzeichnet Anfang einer Media-Query</li>
+</ul>
+<p><img alt="" src="../img/CSS_MediaTypes.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Laboranleitung" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Laboranleitung
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Tools" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Tools
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
