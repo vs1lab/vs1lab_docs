@@ -1,4 +1,4 @@
-**TEIL A – HTML:**
+# TEIL A – HTML
 
 [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
@@ -6,7 +6,7 @@
 
 ![](img/DOM_Diagram.png)
   _________
-- **Head: Metadaten**
+## Head: Metadaten
   - **meta charset = „UTF-8":** Kodierung in UTF-8 Characters
   - **meta name = „viewport":** Display-Information, Display-Größe vom Gerät
   - **meta content = „content":** Enthält Wert vom Element gekennzeichnet durch „name"
@@ -15,22 +15,22 @@
     - **rel:** Relationship zum verlinkten Dokmuent
     - **href:** Pfad/ Link-URL
   _________
-- **Body: Inhalt der GeoLocationApp**
+## Body: Inhalt der GeoLocationApp
   - **Header** : Obere Leiste, meist mit Logo, Titel, Navigation
   - **Main:** Hauptinhalt mit Vielzahl an verschiedenen Strukturelementen
   - **Footer** : Untere Leiste meist mit Kontakt, Impressum, Copyright, Sitemap
   _________
-- **Class-Attribut**:
+## Class-Attribut
   - Globales Attribut
   - Durch Leerzeichen-getrennte Liste von Case-Sensitive Element-Klassen
   - Erlauben die Auswahl und Zugang von CSS und JavaScript zu spezifischen Elementen durch Class-Selectors (z.B. documtent.getElementByClassName)
   _________
-- **Header:**
+## Header
   - **nav** : Section-Element einer Seite die Links zu anderen Seiten enthält (Navigation)
   ![](img/Header_Nav.png)
   _________
 
-- **Main**
+## Main
   - **section** : Abschnitt, meist eines Textes, sollten immer eine Überschrift haben
     - **Child** -Elements: Überschriften, Formulare, div-Container, und mehr.
 
@@ -90,8 +90,8 @@
       - disabled: deaktiviert (keine Eingabe mögliche, ausgegraut)
       - value: fester/fixer eingetragener Wert meist mit readonly
       - readonly: nur lesbar, nicht überschreibbar
-
-- **footer**
+      
+## footer
   - **span:** Generischer Container für Inline (Einzeiler), zur Gruppierung verwendbar
 
     - Ähnlich wie div (aber div ist Block-Element)
@@ -99,9 +99,9 @@
 
 ________________________
 
-**TEIL B - CSS:**
+# TEIL B - CSS:
   ____
-**Allgemeine Infos**:
+## Allgemeine Infos
 
 - CSS-Template enthält Regelmengen für Klassen/ Classes „.row" und „.col-x"
 
@@ -114,7 +114,8 @@ ________________________
 - .col-x =\> 1/3 of right box for taglist (left box of discovery)
 - .col-x =\> 2/3 of right box for map image (right box of discovery)
   ____
-**Flexbox-Guide**: [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+## Flexbox-Guide
+[https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 - Style-Regeln die sich auf mehrere HTML-Elemente gleich auswirken können zusammengefasst werden
 - Nachträglich kann für Unterschiede nochmals Regeln für die Elemente einzeln definiert werden
@@ -122,24 +123,39 @@ ________________________
 
 ![](img/CSS_Selector%20Syntax.png)
   ____
-**Other HTML elements you have to style**
+## Selectors
 
-- Überschriften h1-h8
-- fieldset
-- label
-- input
-  ____
-**Selectors**:
-
+### Beispiele
 - input:not(:last-child) =\> wendet die folgenden Style-Regeln für alle Input-Felder außer dem letzten an
 - input:hover =\> -//- wenn Mauszeiger über Input-Feld
 - [https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0](https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0)
 - [https://htmlcheatsheet.com/css/](https://htmlcheatsheet.com/css/)
 
+### Anwendung
+- Klassen-Selektor nutzen
+- Ggf. neue Klassen zu HTML-Struktur-Elementen zufügen
+
+- Spezifisches Selektieren von Elementen innerhalb einer Klasse möglich
+- Z.B. wenn man nur die Überschriften innerhalb Tagging stylen möchte und nicht die von Discovery:
+
+h2 würde sich auf alle h2-Elemente beziehen
+
+.main\_tagging h2 bezieht sich nur auf h2-Elemente innerhalb der Klasse .main\_tagging
+
+- Reihenfolge wichtig:
+  - z.B. Ausrichtung soll für jede Überschrift gleich sein: center
+  - Aber Farbe soll unterschiedlich sein abhängig von Klasse
+
 ![](img/Selector_Example.png)
   ____
-**Mögliche Style-Regeln:**
+### Mögliche Style-Regeln
+**Other HTML elements you have to style**
+- Überschriften h1-h8
+- fieldset
+- label
+- input
 
+**Beispiel-Attribute**
 - margin: Platz zwischen der Grenze eines Elements zur Grenze eines angrenzenden Elements
 - padding: Platz zwischen Element-Inhalt und Element-Grenze
 - border: Grenze, an der das Element endet
@@ -149,7 +165,6 @@ ________________________
 [https://developer.mozilla.org/en-US/docs/Web/CSS/display?retiredLocale=de](https://developer.mozilla.org/en-US/docs/Web/CSS/display?retiredLocale=de)
 
 - color: Farbe des Elements (letzt definierte Farbe gilt)
-
 
 - line-heigth: Höhe eines Elements
 
@@ -173,13 +188,14 @@ ________________________
 [https://developer.mozilla.org/en-US/docs/Web/CSS/align-items?retiredLocale=de](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items?retiredLocale=de)
 
   ____
-**flex-direction:**
+### flex-direction
 
 - Gibt an, wie die Items innerhalb eines Flex-Containers angeordnet werden (axis/ direction)
 - [**https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction**](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
 - Media-Queries: Sollte bei Handy-Bildschirmen z.B. column sein mit width = 100%, damit die Elemente untereinander rutschen
   ____
-**Style-Regeln umsetzen für:**
+
+### Style-Regeln umsetzen für
 
 - Header-Component
 - Main-Component
@@ -187,23 +203,9 @@ ________________________
 - Discovery-Component
 - Footer-Component
 - Media Queries
-  ____
-**Selectors**
-- Klassen-Selektor nutzen
-- Ggf. neue Klassen zu HTML-Struktur-Elementen zufügen
-
-- Spezifisches Selektieren von Elementen innerhalb einer Klasse möglich
-- Z.B. wenn man nur die Überschriften innerhalb Tagging stylen möchte und nicht die von Discovery:
-
-h2 würde sich auf alle h2-Elemente beziehen
-
-.main\_tagging h2 bezieht sich nur auf h2-Elemente innerhalb der Klasse .main\_tagging
-
-- Reihenfolge wichtig:
-  - z.B. Ausrichtung soll für jede Überschrift gleich sein: center
-  - Aber Farbe soll unterschiedlich sein abhängig von Klasse
 ____
-**Media-Queries:**
+
+# Media-Queries:**
 
 ![](img/MediaQuery_Syntax.png)
 
