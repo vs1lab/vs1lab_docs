@@ -122,13 +122,13 @@
   ____
 ### Selectors
 
-### Beispiele
+**Beispiele**
 - input:not(:last-child) =\> wendet die folgenden Style-Regeln für alle Input-Felder außer dem letzten an
 - input:hover =\> -//- wenn Mauszeiger über Input-Feld
 - [https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0](https://www.dropbox.com/s/h2hni9o1m1di989/CSS%20selectors%20cheatsheet.pdf?dl=0)
 - [https://htmlcheatsheet.com/css/](https://htmlcheatsheet.com/css/)
 
-### Anwendung
+**Anwendung**
 - Klassen-Selektor nutzen
 - Ggf. neue Klassen zu HTML-Struktur-Elementen zufügen
 
@@ -202,7 +202,7 @@ h2 würde sich auf alle h2-Elemente beziehen
 - Media Queries
 ____
 
-## Media-Queries**
+## Media-Queries
 
 ![](img/MediaQuery_Syntax.png)
 
