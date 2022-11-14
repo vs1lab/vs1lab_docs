@@ -22,16 +22,16 @@
   - **Header** : Obere Leiste, meist mit Logo, Titel, Navigation
   - **Main:** Hauptinhalt mit Vielzahl an verschiedenen Strukturelementen
   - **Footer** : Untere Leiste meist mit Kontakt, Impressum, Copyright, Sitemap
-  _________
+
 ### Class-Attribut
   - Globales Attribut
   - Durch Leerzeichen-getrennte Liste von Case-Sensitive Element-Klassen
   - Erlauben die Auswahl und Zugang von CSS und JavaScript zu spezifischen Elementen durch Class-Selectors (z.B. documtent.getElementByClassName)
-  _________
+
 ### Header
   - **nav** : Section-Element einer Seite die Links zu anderen Seiten enthält (Navigation)
   ![](img/Header_Nav.png)
-  _________
+
 
 ### Main
   - **section** : Abschnitt, meist eines Textes, sollten immer eine Überschrift haben
@@ -103,14 +103,14 @@
 - CSS-Template enthält Regelmengen für Klassen/ Classes „.row" und „.col-x"
 
 - Erstellte HTML Struktur-Elemente von TEIL A entsprechend als Zeile/ Spalte kennzeichnen, durch hinzufügen von jeweiligen class name
-  ____
+
 **Mögliche Aufteilung**
 
 - .col-x =\> 1/4 of main box for tagging (left box)
 - .col-x =\> 3/4 of main box for discovery (right box)
 - .col-x =\> 1/3 of right box for taglist (left box of discovery)
 - .col-x =\> 2/3 of right box for map image (right box of discovery)
-  ____
+ 
 ### Flexbox-Guide
 [https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
@@ -119,7 +119,7 @@
 - Style-Regeln wirken der Reihenfolge nach in der sie definiert werden
 
 ![](img/CSS_Selector%20Syntax.png)
-  ____
+
 ### Selectors
 
 **Beispiele**
@@ -144,7 +144,7 @@ h2 würde sich auf alle h2-Elemente beziehen
   - Aber Farbe soll unterschiedlich sein abhängig von Klasse
 
 ![](img/Selector_Example.png)
-  ____
+
 ### Mögliche Style-Regeln
 **Other HTML elements you have to style**
 - Überschriften h1-h8
@@ -184,13 +184,12 @@ h2 würde sich auf alle h2-Elemente beziehen
 
 [https://developer.mozilla.org/en-US/docs/Web/CSS/align-items?retiredLocale=de](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items?retiredLocale=de)
 
-  ____
+
 ### flex-direction
 
 - Gibt an, wie die Items innerhalb eines Flex-Containers angeordnet werden (axis/ direction)
 - [**https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction**](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
 - Media-Queries: Sollte bei Handy-Bildschirmen z.B. column sein mit width = 100%, damit die Elemente untereinander rutschen
-  ____
 
 ### Style-Regeln umsetzen für
 
@@ -200,7 +199,7 @@ h2 würde sich auf alle h2-Elemente beziehen
 - Discovery-Component
 - Footer-Component
 - Media Queries
-____
+
 
 ## Media-Queries
 
