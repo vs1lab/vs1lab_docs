@@ -200,9 +200,6 @@ h2 würde sich auf alle h2-Elemente beziehen
 - Footer-Component
 - Media Queries
 
-
-
-
 ## Media-Queries
 
 ![](img/MediaQuery_Syntax.png)
