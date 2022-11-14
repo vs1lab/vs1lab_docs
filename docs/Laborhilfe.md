@@ -99,7 +99,7 @@
 
 ________________________
 
-# TEIL B - CSS:
+# TEIL B - CSS
   ____
 ## Allgemeine Infos
 
@@ -107,7 +107,7 @@ ________________________
 
 - Erstellte HTML Struktur-Elemente von TEIL A entsprechend als Zeile/ Spalte kennzeichnen, durch hinzufügen von jeweiligen class name
   ____
-**Mögliche Aufteilung**:
+**Mögliche Aufteilung**
 
 - .col-x =\> 1/4 of main box for tagging (left box)
 - .col-x =\> 3/4 of main box for discovery (right box)
@@ -205,7 +205,7 @@ h2 würde sich auf alle h2-Elemente beziehen
 - Media Queries
 ____
 
-# Media-Queries:**
+# Media-Queries**
 
 ![](img/MediaQuery_Syntax.png)
 
